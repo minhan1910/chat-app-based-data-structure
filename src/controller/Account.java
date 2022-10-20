@@ -5,7 +5,6 @@ import java.util.Set;
 import model.Message;
 import repository.MessageRepository;
 
-// SOLID - > D -> Dependency Inversion 
 public class Account {
     private String name;
     private final MessageRepository msgRepo;
@@ -15,7 +14,7 @@ public class Account {
     }
 
     public Account(MessageRepository msgRepo, String name) {
-        this.msgRepo = msgRepo;
+        this(msgRepo);
         this.name = name;
     }
 
