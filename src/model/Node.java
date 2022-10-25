@@ -21,17 +21,17 @@ public class Node<T> {
         this.next = next;
     }
 
-    public Node(Node<T> prev, T value, Node<T> next) {
+    public Node(T value, Node<T> prev, Node<T> next) {
         this.value = value;
         this.next = next;
         this.prev = prev;
     }
 
-    public T getValue() {
+    public T getData() {
         return value;
     }
 
-    public void setValue(T value) {
+    public void setData(T value) {
         this.value = value;
     }
 

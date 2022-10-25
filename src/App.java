@@ -11,6 +11,8 @@ public class App {
     static final Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
+        clearConsole();
+
         // Set up Repository
         MessageRepositoryType basedQueue = MessageRepositoryType.QUEUE_BASED_DOUBLY_LINKED_LIST;
         MessageRepositoryType basedStack = MessageRepositoryType.STACK_BASED_DOUBLY_LINKED_LIST;
@@ -78,7 +80,7 @@ public class App {
         System.out.println(String.format("%9s", "---------------------------------------------"));
         System.out.println("1. Send message");
         System.out.println("2. Show all messages");
-        System.out.println("3. Show latest messages");
+        System.out.println("3. Get message");
         System.out.println("0. Exit");
         System.out.println(String.format("%9s", "---------------------------------------------"));
         System.out.print("Enter your choice: ");

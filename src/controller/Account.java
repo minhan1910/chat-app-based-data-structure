@@ -57,8 +57,4 @@ public class Account {
         this.name = name;
     }
 
-    public MessageRepository getMsgRepo() {
-        return msgRepo;
-    }
-
 }

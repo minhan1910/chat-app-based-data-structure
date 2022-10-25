@@ -1,23 +1,21 @@
 package test;
 
-import java.util.Iterator;
+import helper.Stack;
+import helper.impl.StackLinkedListImpl;
 
-import helper.Queue;
-import helper.impl.QueueLinkedListImpl;
-
-public class QueueLinkedListTest {
+public class StackTest {
     public static void main(String[] args) {
         int numberOfOperations = 10000000;
         long startTime = System.nanoTime();
         // Linked list based queue
-        Queue<Integer> linkedListBasedQueue = new QueueLinkedListImpl<>();
+        Stack<Integer> linkedListBasedStack = new StackLinkedListImpl<>();
 
         startTime = System.nanoTime();
         for (int i = 0; i < numberOfOperations; i++) {
-            linkedListBasedQueue.enqueue(i);
+            linkedListBasedStack.push(i);
         }
         for (int i = 0; i < numberOfOperations; i++) {
-            linkedListBasedQueue.dequeue();
+            linkedListBasedStack.pop();
         }
 
         long endTime = System.nanoTime();

@@ -1,6 +1,7 @@
 package helper.impl;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 import helper.List;
 import helper.Stack;
@@ -25,6 +26,8 @@ public class StackLinkedListImpl<E> implements Stack<E> {
 
     @Override
     public E pop() {
+        if (isEmpty())
+            throw new NoSuchElementException("Stack is empty!");
         return this.linkedList.removeFirst();
     }
 
@@ -47,5 +50,4 @@ public class StackLinkedListImpl<E> implements Stack<E> {
     public Iterator<E> iterator() {
         return this.linkedList.iterator();
     }
-
 }
